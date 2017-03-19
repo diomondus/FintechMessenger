@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ColoredLabel: UILabel!
 
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var BlueButton: UIButton!
     @IBOutlet weak var PinkButton: UIButton!
     
+    @IBOutlet weak var LoginTextField: UITextField!
     @IBAction func paintTextToBlack(_ sender: Any) {
         ColoredLabel.textColor = UIColor.black
     }
@@ -42,14 +43,29 @@ class ViewController: UIViewController {
         print("Сохранение данных профиля")
     }
     
+    //--- Вызывается, когда пользователь кликает на view (за пределами textField)--
+    // к сожалению не будет работать если компоненты расположены на scrollview
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches , with:event)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.endEditing(true)
         // Do any additional setup after loading the view, typically from a nib.
+        self.LoginTextField.delegate = self;
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

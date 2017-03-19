@@ -44,7 +44,7 @@
                                 <rect key="frame" x="26" y="70" width="323" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-CO-6LN">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
@@ -176,6 +176,7 @@
                         <outlet property="BlueButton" destination="EeW-Rl-FHQ" id="sAn-CG-mqr"/>
                         <outlet property="ColoredLabel" destination="lXJ-0W-oEC" id="DsI-4F-jwm"/>
                         <outlet property="GreenButton" destination="Coh-lw-xdT" id="onP-ja-Tfz"/>
+                        <outlet property="LoginTextField" destination="VMO-6l-Stt" id="HEB-jY-GjH"/>
                         <outlet property="PinkButton" destination="EfL-i1-Dlh" id="nf6-Y2-Q7t"/>
                         <outlet property="RedButton" destination="oIT-Tp-lQL" id="N1U-8C-1w1"/>
                     </connections>
