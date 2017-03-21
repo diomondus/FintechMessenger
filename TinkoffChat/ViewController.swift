@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
+    @IBOutlet weak var ImageView: UIImageView!
+
     @IBOutlet weak var ColoredLabel: UILabel!
 
     @IBOutlet weak var BlackButton: UIButton!
@@ -19,6 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PinkButton: UIButton!
     
     @IBOutlet weak var LoginTextField: UITextField!
+    
+    @IBOutlet weak var aboutTextView: UITextView!
     @IBAction func paintTextToBlack(_ sender: Any) {
         ColoredLabel.textColor = UIColor.black
     }
@@ -39,12 +43,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ColoredLabel.textColor = UIColor.purple
     }
     
+    @IBAction func chooseOrTakePhoto(_ sender: Any) {
+        print("Выбор фотографии или камеры")
+        // to do
+    }
+    
     @IBAction func saveProfileAction(_ sender: Any) {
         print("Сохранение данных профиля")
     }
     
     //--- Вызывается, когда пользователь кликает на view (за пределами textField)--
-    // к сожалению не будет работать если компоненты расположены на scrollview
+    // к сожалению не будет работать, если компоненты расположены на scrollview
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)
@@ -54,19 +63,51 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        printConrollsDescription()
         self.view.endEditing(true)
-        // Do any additional setup after loading the view, typically from a nib.
-        self.LoginTextField.delegate = self;
+        self.LoginTextField.delegate = self;  // для кнопки "готово"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        printConrollsDescription()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        printConrollsDescription()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        printConrollsDescription()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        printConrollsDescription()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        printConrollsDescription()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
+    func printConrollsDescription() {
+        print(BlackButton.description)
+        print(RedButton.description)
+        print(BlueButton.description)
+        print(GreenButton.description)
+        print(PinkButton.description)
+        print(LoginTextField.description)
+        print(aboutTextView.description)
+    }
+
 }
 

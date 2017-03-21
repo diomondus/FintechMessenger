@@ -127,6 +127,19 @@
                                     <action selector="paintTextToBlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCT-Ns-7fT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCA-e2-2a0">
+                                <rect key="frame" x="97.5" y="274" width="180" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Z3M-Zh-OzF"/>
+                                    <constraint firstAttribute="width" constant="180" id="gHX-uZ-zBP"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseOrTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ait-lW-fz4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -155,10 +168,12 @@
                             <constraint firstItem="qZ3-W3-5OO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Znv-hm-jal"/>
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="top" secondItem="qZ3-W3-5OO" secondAttribute="bottom" constant="12" id="bpb-50-evv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mbp-CO-6LN" secondAttribute="bottom" id="cCg-Fb-hSz"/>
+                            <constraint firstItem="QCA-e2-2a0" firstAttribute="top" secondItem="CTk-ia-U0n" secondAttribute="bottom" constant="20" id="dKi-qr-9Z5"/>
                             <constraint firstItem="uSa-Cn-nrI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="dPW-1k-gKz"/>
                             <constraint firstItem="oIT-Tp-lQL" firstAttribute="leading" secondItem="qZ3-W3-5OO" secondAttribute="trailing" constant="2" id="dQ9-Wy-kTs"/>
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="top" secondItem="EeW-Rl-FHQ" secondAttribute="bottom" constant="12" id="eSH-8W-Hj1"/>
                             <constraint firstItem="Coh-lw-xdT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eaN-T5-zCD"/>
+                            <constraint firstItem="QCA-e2-2a0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fTN-AL-EyV"/>
                             <constraint firstItem="mYU-bb-fEU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="gbW-e8-fhg"/>
                             <constraint firstAttribute="trailing" secondItem="mbp-CO-6LN" secondAttribute="trailing" id="jGy-qE-Etu"/>
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jLz-gf-CkC"/>
@@ -179,6 +194,7 @@
                         <outlet property="LoginTextField" destination="VMO-6l-Stt" id="HEB-jY-GjH"/>
                         <outlet property="PinkButton" destination="EfL-i1-Dlh" id="nf6-Y2-Q7t"/>
                         <outlet property="RedButton" destination="oIT-Tp-lQL" id="N1U-8C-1w1"/>
+                        <outlet property="aboutTextView" destination="uSa-Cn-nrI" id="P1n-ca-aq9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
