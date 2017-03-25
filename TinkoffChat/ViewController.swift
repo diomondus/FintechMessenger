@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var ImageView: UIImageView!
 
     @IBOutlet weak var ColoredLabel: UILabel!
@@ -65,8 +66,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.viewDidLoad()
         
         printConrollsDescription()
-        self.view.endEditing(true)
-        self.LoginTextField.delegate = self;  // для кнопки "готово"
+        
+        view.endEditing(true)
+        LoginTextField.delegate = self;  // для кнопки "готово"
     }
     
     override func viewWillAppear(_ animated: Bool) {
