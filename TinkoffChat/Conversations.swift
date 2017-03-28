@@ -22,7 +22,7 @@ class ConversationsViewController: UIViewController, UITableViewDataSource
 //        tableView.backgroundColor = specialColor
         tableView.dataSource = self;
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 150.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,9 +50,9 @@ class ConversationsViewController: UIViewController, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return ""
-    }
+//    func tableView(_ tableView: UITableView, estimateForRowAt indexPath: IndexPath ) -> CGFloat? {
+//        return UITableViewAutomaticDimension
+//    }
     
     let lightYellow = UIColor(colorLiteralRed: 255, green: 255, blue: 0, alpha: 0.18)
     
@@ -61,9 +61,11 @@ class ConversationsViewController: UIViewController, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "dialogCell")! as UITableViewCell
         if (indexPath.section == 0) {
             cell.textLabel?.text = onlineConversations[indexPath.row]
+            cell.detailTextLabel?.text = "Last message"
             cell.backgroundColor = lightYellow
         } else {
             cell.textLabel?.text = historyConversations[indexPath.row]
+            cell.detailTextLabel?.text = "Last message"
             //cell.backgroundColor = specialColor
         }
         return cell
