@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E4C5D791E8693FB00C5E7DD /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C5D781E8693FB00C5E7DD /* Conversations.swift */; };
 		5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */; };
 		5EB5FC5C1E6AEA82000562C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5B1E6AEA82000562C6 /* ViewController.swift */; };
 		5EB5FC5F1E6AEA82000562C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */; };
 		5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */; };
 		5EB5FC641E6AEA82000562C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC631E6AEA82000562C6 /* Assets.xcassets */; };
 		5EB5FC671E6AEA82000562C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */; };
+		5EF056911E8A4A2C00E104B1 /* RootChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF056901E8A4A2C00E104B1 /* RootChat.swift */; };
+		5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF056921E8A4ED700E104B1 /* Conversations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E4C5D781E8693FB00C5E7DD /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
 		5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB5FC5B1E6AEA82000562C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +26,8 @@
 		5EB5FC631E6AEA82000562C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB5FC661E6AEA82000562C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB5FC681E6AEA82000562C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF056901E8A4A2C00E104B1 /* RootChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootChat.swift; sourceTree = "<group>"; };
+		5EF056921E8A4ED700E104B1 /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 		5EB5FC581E6AEA82000562C6 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
+				5EF056921E8A4ED700E104B1 /* Conversations.swift */,
+				5EF056901E8A4A2C00E104B1 /* RootChat.swift */,
 				5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */,
 				5EB5FC5B1E6AEA82000562C6 /* ViewController.swift */,
 				5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */,
@@ -65,7 +69,6 @@
 				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
 				5EB5FC681E6AEA82000562C6 /* Info.plist */,
 				5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */,
-				5E4C5D781E8693FB00C5E7DD /* Conversations.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -143,10 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4C5D791E8693FB00C5E7DD /* Conversations.swift in Sources */,
+				5EF056911E8A4A2C00E104B1 /* RootChat.swift in Sources */,
 				5EB5FC5C1E6AEA82000562C6 /* ViewController.swift in Sources */,
 				5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */,
 				5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */,
+				5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
