@@ -20,9 +20,9 @@ class ConversationsViewController: UIViewController, UITableViewDataSource
         super.viewDidLoad()
 //        view.backgroundColor = specialColor
 //        tableView.backgroundColor = specialColor
-        tableView.dataSource = self;
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 150.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,14 +58,16 @@ class ConversationsViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dialogCell")! as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dialogCell") as! DialogCell
         if (indexPath.section == 0) {
-            cell.textLabel?.text = onlineConversations[indexPath.row]
-            cell.detailTextLabel?.text = "Last message"
+            cell.nameLabel.text = onlineConversations[indexPath.row]
+            cell.messLabel.text = ""
+            cell.timeLabel.text = "23:59"
             cell.backgroundColor = lightYellow
         } else {
-            cell.textLabel?.text = historyConversations[indexPath.row]
-            cell.detailTextLabel?.text = "Last message"
+            cell.nameLabel.text = historyConversations[indexPath.row]
+            cell.messLabel.text = ""
+            cell.timeLabel.text = "23:30"
             //cell.backgroundColor = specialColor
         }
         return cell

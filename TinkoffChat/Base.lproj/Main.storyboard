@@ -26,26 +26,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dialogCell" rowHeight="66" id="e59-uW-uuZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dialogCell" rowHeight="66" id="e59-uW-uuZ" customClass="DialogCell" customModule="TinkoffChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e59-uW-uuZ" id="gFE-5q-Z57">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-y3-XNa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-y3-XNa" userLabel="TimeLabel">
                                                     <rect key="frame" x="282" y="5" width="80" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjV-tl-7Xn">
+                                                    <rect key="frame" x="15" y="40" width="83" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t2-12-wbC">
+                                                    <rect key="frame" x="13" y="13" width="87" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YjV-tl-7Xn" secondAttribute="bottom" constant="5" id="3Ch-vV-Uta"/>
+                                                <constraint firstItem="YjV-tl-7Xn" firstAttribute="leading" secondItem="gFE-5q-Z57" secondAttribute="leading" constant="15" id="NXq-oH-ZcI"/>
                                                 <constraint firstItem="Elv-y3-XNa" firstAttribute="top" secondItem="gFE-5q-Z57" secondAttribute="top" constant="5" id="PSa-Tv-8OI"/>
+                                                <constraint firstItem="7t2-12-wbC" firstAttribute="top" secondItem="gFE-5q-Z57" secondAttribute="topMargin" constant="5" id="T4z-Pm-71s"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Elv-y3-XNa" secondAttribute="trailing" constant="5" id="drw-Il-XIa"/>
+                                                <constraint firstItem="7t2-12-wbC" firstAttribute="leading" secondItem="gFE-5q-Z57" secondAttribute="leadingMargin" constant="5" id="tcX-xj-gJV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="messLabel" destination="YjV-tl-7Xn" id="ily-JK-HHK"/>
+                                            <outlet property="nameLabel" destination="7t2-12-wbC" id="GUP-hB-5h7"/>
+                                            <outlet property="timeLabel" destination="Elv-y3-XNa" id="VTr-LN-EVg"/>
                                             <segue destination="klX-Ir-boj" kind="show" id="06E-8C-LC2"/>
                                         </connections>
                                     </tableViewCell>
