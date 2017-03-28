@@ -23,15 +23,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MEJ-HK-dap">
-                                <rect key="frame" x="16" y="20" width="343" height="617"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MEJ-HK-dap">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dialogCell" id="e59-uW-uuZ">
-                                        <rect key="frame" x="0.0" y="56" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dialogCell" rowHeight="66" id="e59-uW-uuZ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e59-uW-uuZ" id="gFE-5q-Z57">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -43,10 +44,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MEJ-HK-dap" firstAttribute="top" secondItem="9rg-JP-vvb" secondAttribute="bottom" id="8p6-6H-kkB"/>
-                            <constraint firstItem="MEJ-HK-dap" firstAttribute="leading" secondItem="baG-rO-eyH" secondAttribute="leadingMargin" id="Vmo-EB-uIj"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="MEJ-HK-dap" secondAttribute="bottom" constant="30" id="hiG-6n-yhe"/>
-                            <constraint firstItem="MEJ-HK-dap" firstAttribute="trailing" secondItem="baG-rO-eyH" secondAttribute="trailingMargin" id="jN6-Rf-75j"/>
+                            <constraint firstAttribute="bottom" secondItem="MEJ-HK-dap" secondAttribute="bottom" id="Y9V-xx-6kK"/>
+                            <constraint firstAttribute="trailing" secondItem="MEJ-HK-dap" secondAttribute="trailing" id="aNp-ea-T6c"/>
+                            <constraint firstItem="MEJ-HK-dap" firstAttribute="leading" secondItem="baG-rO-eyH" secondAttribute="leading" id="qoc-P7-BG1"/>
+                            <constraint firstItem="MEJ-HK-dap" firstAttribute="top" secondItem="baG-rO-eyH" secondAttribute="topMargin" id="usy-PH-Bmg"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -109,7 +110,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-lw-xdT">
-                                <rect key="frame" x="154" y="537" width="67" height="30"/>
+                                <rect key="frame" x="154" y="581" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.094609965266733265" green="0.99942404029999998" blue="0.044137774245162242" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="GreenButton">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -119,7 +120,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeW-Rl-FHQ">
-                                <rect key="frame" x="223" y="537" width="67" height="30"/>
+                                <rect key="frame" x="223" y="581" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.10519598002269594" blue="0.99942404029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="BlueButton">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -129,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-i1-Dlh">
-                                <rect key="frame" x="292" y="537" width="67" height="30"/>
+                                <rect key="frame" x="292" y="581" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.012880572326219426" blue="0.92580515289998633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="PinkButton">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -139,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIT-Tp-lQL">
-                                <rect key="frame" x="85" y="537" width="67" height="30"/>
+                                <rect key="frame" x="85" y="581" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.047268182572937786" blue="0.019193983900760915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="RedButton">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -149,7 +150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-CO-6LN">
-                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.9994240403175354" green="0.8674838311703873" blue="0.2065750393258963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="aB2-2U-E8L"/>
@@ -162,12 +163,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет текста" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXJ-0W-oEC">
-                                <rect key="frame" x="16" y="511" width="343" height="18"/>
+                                <rect key="frame" x="16" y="555" width="343" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZ3-W3-5OO">
-                                <rect key="frame" x="16" y="537" width="67" height="30"/>
+                                <rect key="frame" x="16" y="581" width="67" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="BlackButton">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -180,7 +181,7 @@
                                 <rect key="frame" x="0.0" y="18" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Профиль" id="3Mx-aG-0uL">
-                                        <barButtonItem key="leftBarButtonItem" title="Tinkoff Chat" id="Ddo-SM-5R6">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Ddo-SM-5R6">
                                             <connections>
                                                 <segue destination="2oz-bt-6Tg" kind="show" id="GI3-mF-pH7"/>
                                             </connections>
