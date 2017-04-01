@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E9CB2361E8AF78100CE43BF /* DialogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9CB2351E8AF78100CE43BF /* DialogCell.swift */; };
+		5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6278D51E8F7A1100C22646 /* ChatCell.swift */; };
 		5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */; };
 		5EB5FC5C1E6AEA82000562C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5B1E6AEA82000562C6 /* ViewController.swift */; };
 		5EB5FC5F1E6AEA82000562C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E9CB2351E8AF78100CE43BF /* DialogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogCell.swift; sourceTree = "<group>"; };
+		5E6278D51E8F7A1100C22646 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB5FC5B1E6AEA82000562C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
 				5EB5FC681E6AEA82000562C6 /* Info.plist */,
 				5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */,
-				5E9CB2351E8AF78100CE43BF /* DialogCell.swift */,
+				5E6278D51E8F7A1100C22646 /* ChatCell.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				5EB5FC5C1E6AEA82000562C6 /* ViewController.swift in Sources */,
 				5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */,
 				5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */,
-				5E9CB2361E8AF78100CE43BF /* DialogCell.swift in Sources */,
+				5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */,
 				5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

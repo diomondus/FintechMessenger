@@ -21,6 +21,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var BlueButton: UIButton!
     @IBOutlet weak var PinkButton: UIButton!
     
+    @IBAction func dismissProfile(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var LoginTextField: UITextField!
     
     @IBOutlet weak var aboutTextView: UITextView!
