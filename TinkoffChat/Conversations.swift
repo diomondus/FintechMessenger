@@ -14,10 +14,12 @@ class ConversationsViewController: UITableViewController
     let historyConversations = ["Саня","Коля","Настя","Стас","Андрей","Никита","Саня","Коля","Света","Полина"]
     
     let specialColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 0.1)
+    let lightYellow = UIColor(colorLiteralRed: 255, green: 255, blue: 0, alpha: 0.18)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = specialColor
-//        tableView.backgroundColor = specialColor
+        view.backgroundColor = specialColor
+        tableView.backgroundColor = specialColor
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 44
@@ -49,13 +51,7 @@ class ConversationsViewController: UITableViewController
             return "";
         }
     }
-    
-//    func tableView(_ tableView: UITableView, estimateForRowAt indexPath: IndexPath ) -> CGFloat? {
-//        return UITableViewAutomaticDimension
-//    }
-    
-    let lightYellow = UIColor(colorLiteralRed: 255, green: 255, blue: 0, alpha: 0.18)
-    
+  
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -72,9 +68,8 @@ class ConversationsViewController: UITableViewController
             cell.nameLabel.text = historyConversations[indexPath.row]
             cell.messageLabel.text = "Message"
             cell.timeLabel.text = "23:30"
-            //cell.backgroundColor = specialColor
+            cell.backgroundColor = specialColor
         }
         return cell
     }
-    
 }
