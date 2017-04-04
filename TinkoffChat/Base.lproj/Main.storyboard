@@ -113,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYX-vk-yxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153" y="-72"/>
+            <point key="canvasLocation" x="30" y="-616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="u6B-QV-goO">
@@ -134,7 +134,7 @@
         <!--EditProfileViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="EditProfileViewController" customClass="ViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="EditProfileViewController" customClass="ProfileViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -168,7 +168,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="5bA-86-4Dq">
-                                <rect key="frame" x="97.5" y="276" width="180" height="180"/>
+                                <rect key="frame" x="98" y="276" width="180" height="180"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Oh1-94-79N"/>
@@ -218,19 +218,6 @@
                                     <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ft-jS-5Vw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-CO-6LN">
-                                <rect key="frame" x="0.0" y="623" width="177.5" height="44"/>
-                                <color key="backgroundColor" red="0.9994240403175354" green="0.8674838311703873" blue="0.2065750393258963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="aB2-2U-E8L"/>
-                                </constraints>
-                                <state key="normal" title="GCD">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wbx-rw-CqM" kind="show" id="nDe-B7-Rfk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет текста" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXJ-0W-oEC">
                                 <rect key="frame" x="16" y="555" width="343" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -268,7 +255,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2Z-Ds-hHK">
-                                <rect key="frame" x="198" y="623" width="177" height="44"/>
+                                <rect key="frame" x="197.5" y="623" width="177.5" height="44"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.86748383120000006" blue="0.20657503930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="LpO-tZ-yfK"/>
@@ -276,7 +263,26 @@
                                 <state key="normal" title="Operation">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="operationSaveDateToFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFt-iB-Ehp"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-CO-6LN">
+                                <rect key="frame" x="0.0" y="623" width="177.5" height="44"/>
+                                <color key="backgroundColor" red="0.9994240403175354" green="0.8674838311703873" blue="0.2065750393258963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aB2-2U-E8L"/>
+                                </constraints>
+                                <state key="normal" title="GCD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gcdSaveDataToFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhQ-0h-rgq"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qmG-jS-dcB">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,6 +308,7 @@
                             <constraint firstItem="EfL-i1-Dlh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UeT-oD-Ibi"/>
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="top" secondItem="EfL-i1-Dlh" secondAttribute="bottom" constant="12" id="VKh-ff-Vrq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VMO-6l-Stt" secondAttribute="trailing" constant="10" id="VKs-wX-8gV"/>
+                            <constraint firstItem="qmG-jS-dcB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vdh-lO-urV"/>
                             <constraint firstItem="EfL-i1-Dlh" firstAttribute="width" secondItem="EeW-Rl-FHQ" secondAttribute="width" id="W3b-vI-u76"/>
                             <constraint firstItem="5bA-86-4Dq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xbh-Op-Tsh"/>
                             <constraint firstItem="CTk-ia-U0n" firstAttribute="top" secondItem="uSa-Cn-nrI" secondAttribute="bottom" constant="10" id="YZh-4y-Ud7"/>
@@ -320,6 +327,7 @@
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="top" secondItem="oIT-Tp-lQL" secondAttribute="bottom" constant="12" id="oA5-D7-VxA"/>
                             <constraint firstItem="oIT-Tp-lQL" firstAttribute="top" secondItem="lXJ-0W-oEC" secondAttribute="bottom" constant="8" id="oh8-5d-gEd"/>
                             <constraint firstItem="s9Q-JW-4oo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="tCg-9i-Djc"/>
+                            <constraint firstItem="qmG-jS-dcB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uT0-QT-IDF"/>
                             <constraint firstItem="EfL-i1-Dlh" firstAttribute="leading" secondItem="EeW-Rl-FHQ" secondAttribute="trailing" constant="2" id="vsv-in-EkU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uSa-Cn-nrI" secondAttribute="trailing" constant="10" id="w4c-9Z-Wee"/>
                             <constraint firstItem="mbp-CO-6LN" firstAttribute="top" secondItem="qZ3-W3-5OO" secondAttribute="bottom" constant="12" id="yZg-8s-kFP"/>
@@ -331,14 +339,17 @@
                         <outlet property="ColoredLabel" destination="lXJ-0W-oEC" id="DsI-4F-jwm"/>
                         <outlet property="LoginTextField" destination="VMO-6l-Stt" id="HEB-jY-GjH"/>
                         <outlet property="aboutTextView" destination="uSa-Cn-nrI" id="P1n-ca-aq9"/>
+                        <outlet property="activityIndicator" destination="qmG-jS-dcB" id="PER-58-JYU"/>
+                        <outlet property="gcdSaveButton" destination="mbp-CO-6LN" id="Sgo-ir-2fc"/>
                         <outlet property="imageView" destination="5bA-86-4Dq" id="nId-jU-NRY"/>
                         <outlet property="navigationBar" destination="yrY-wW-MXO" id="10R-Et-mKg"/>
+                        <outlet property="operationSaveButton" destination="C2Z-Ds-hHK" id="KKZ-V9-3bJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="clf-cz-Zgi"/>
             </objects>
-            <point key="canvasLocation" x="-759" y="863"/>
+            <point key="canvasLocation" x="30" y="428"/>
         </scene>
     </scenes>
     <resources>
