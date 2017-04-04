@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jwh-tq-Xt9" id="dY6-53-EGI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cth-W6-Zsg" userLabel="Name Label">
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ox5-xR-3fu" id="YGv-0x-K2g">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -168,7 +168,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="5bA-86-4Dq">
-                                <rect key="frame" x="98" y="276" width="180" height="180"/>
+                                <rect key="frame" x="97.5" y="276" width="180" height="180"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Oh1-94-79N"/>
@@ -185,7 +185,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paintTextToGreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atH-X8-aua"/>
+                                    <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZg-PK-Gah"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeW-Rl-FHQ">
@@ -195,7 +195,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paintTextToBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNC-Ya-Jmb"/>
+                                    <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vn2-ot-0ko"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-i1-Dlh">
@@ -205,7 +205,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paintTextToPurple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXB-XH-WBi"/>
+                                    <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9D-Tm-qdM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIT-Tp-lQL">
@@ -215,7 +215,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paintTextToRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pE0-6R-AYW"/>
+                                    <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ft-jS-5Vw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-CO-6LN">
@@ -228,7 +228,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveProfileAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSS-ec-hok"/>
                                     <segue destination="wbx-rw-CqM" kind="show" id="nDe-B7-Rfk"/>
                                 </connections>
                             </button>
@@ -244,7 +243,7 @@
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paintTextToBlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCT-Ns-7fT"/>
+                                    <action selector="changeTextColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxD-ff-96e"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrY-wW-MXO">
@@ -277,9 +276,6 @@
                                 <state key="normal" title="Operation">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="saveProfileAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmm-Zr-Uep"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,13 +328,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BlackButton" destination="qZ3-W3-5OO" id="9Ad-0r-wee"/>
-                        <outlet property="BlueButton" destination="EeW-Rl-FHQ" id="sAn-CG-mqr"/>
                         <outlet property="ColoredLabel" destination="lXJ-0W-oEC" id="DsI-4F-jwm"/>
-                        <outlet property="GreenButton" destination="Coh-lw-xdT" id="onP-ja-Tfz"/>
                         <outlet property="LoginTextField" destination="VMO-6l-Stt" id="HEB-jY-GjH"/>
-                        <outlet property="PinkButton" destination="EfL-i1-Dlh" id="nf6-Y2-Q7t"/>
-                        <outlet property="RedButton" destination="oIT-Tp-lQL" id="N1U-8C-1w1"/>
                         <outlet property="aboutTextView" destination="uSa-Cn-nrI" id="P1n-ca-aq9"/>
                         <outlet property="imageView" destination="5bA-86-4Dq" id="nId-jU-NRY"/>
                         <outlet property="navigationBar" destination="yrY-wW-MXO" id="10R-Et-mKg"/>
@@ -347,7 +338,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="clf-cz-Zgi"/>
             </objects>
-            <point key="canvasLocation" x="-759.20000000000005" y="868.51574212893559"/>
+            <point key="canvasLocation" x="-759" y="863"/>
         </scene>
     </scenes>
     <resources>

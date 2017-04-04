@@ -15,42 +15,24 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
 
 
     @IBOutlet weak var ColoredLabel: UILabel!
-
-    @IBOutlet weak var BlackButton: UIButton!
-    @IBOutlet weak var RedButton: UIButton!
-    @IBOutlet weak var GreenButton: UIButton!
-    @IBOutlet weak var BlueButton: UIButton!
-    @IBOutlet weak var PinkButton: UIButton!
     
     @IBAction func dismissProfile(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBOutlet weak var LoginTextField: UITextField!
     
     @IBOutlet weak var aboutTextView: UITextView!
-    @IBAction func paintTextToBlack(_ sender: Any) {
-        ColoredLabel.textColor = UIColor.black
+    
+    @IBAction func changeTextColorAction(_ sender: UIButton) {
+        if let color = sender.backgroundColor {
+           ColoredLabel.textColor = color
+        }
     }
     
-    @IBAction func paintTextToRed(_ sender: Any) {
-         ColoredLabel.textColor = UIColor.red
-    }
-    
-    @IBAction func paintTextToGreen(_ sender: Any) {
-        ColoredLabel.textColor = UIColor.green
-    }
-    
-    @IBAction func paintTextToBlue(_ sender: Any) {
-        ColoredLabel.textColor = UIColor.blue
-    }
-    
-    @IBAction func paintTextToPurple(_ sender: Any) {
-        ColoredLabel.textColor = UIColor.purple
-    }
-    
-    @IBAction func saveProfileAction(_ sender: Any) {
-        print("Сохранение данных профиля")
-    }
+//    @IBAction func saveProfileAction(_ sender: Any) {
+//        print("Сохранение данных профиля")
+//    }
     
     let specialColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 0.1)
     
@@ -59,7 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         return UIImagePickerController()
     }()
     
-    lazy var avatarImageActionSheet : UIAlertController = {
+    lazy var imageActionSheet : UIAlertController = {
         
         return UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     }()
@@ -78,16 +60,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.viewDidLoad()
         
         view.backgroundColor = specialColor
-        printConrollsDescription()
+        //printConrollsDescription()
         
         view.endEditing(true)
         LoginTextField.delegate = self;  // для кнопки "готово"
         
         photoPicker.delegate = self
-        setupGestureRecognizer()
+        initGestureRecognizer()
     }
     
-    func setupGestureRecognizer() {
+    func initGestureRecognizer() {
         let tapOnEmptySpace = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tapOnEmptySpace)
         
@@ -96,12 +78,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         imageView.addGestureRecognizer(tapOnImage)
     }
     
-    func setupDefaultActionSheet() {
-        avatarImageActionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    func initDefaultActionSheet() {
+        imageActionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        avatarImageActionSheet.addAction(UIAlertAction(title: "Сделать снимок", style: .default) {
+        imageActionSheet.addAction(UIAlertAction(title: "Сделать снимок", style: .default) {
             [unowned self] action in
-            
             self.photoPicker.allowsEditing = false
             self.photoPicker.sourceType = UIImagePickerControllerSourceType.camera
             self.photoPicker.cameraCaptureMode = .photo
@@ -109,31 +90,30 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             self.present(self.photoPicker, animated: true)
         })
         
-        avatarImageActionSheet.addAction(UIAlertAction(title: "Выбрать фото", style: .default) {
+        imageActionSheet.addAction(UIAlertAction(title: "Выбрать фото", style: .default) {
             [unowned self] action in
-            
             self.photoPicker.allowsEditing = false
             self.photoPicker.sourceType = .photoLibrary
             self.photoPicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
             self.present(self.photoPicker, animated: true)
         })
         
-        avatarImageActionSheet.addAction(UIAlertAction(title: "Отменить", style: .cancel) { action in })
+        imageActionSheet.addAction(UIAlertAction(title: "Отмена", style: .cancel) { action in })
     }
     
-    func addDeleteActionToDefaultActionSheet() {
-        avatarImageActionSheet.addAction(UIAlertAction(title: "Удалить", style: .destructive) {
-            [unowned self] action in
-            
-            self.imageView.image = #imageLiteral(resourceName: "placeholder-user")
-            self.setupDefaultActionSheet()
-        })
-    }
+//    func addDeleteActionToDefaultActionSheet() {
+//        imageActionSheet.addAction(UIAlertAction(title: "Удалить", style: .destructive) {
+//            [unowned self] action in
+//            
+//            self.imageView.image = #imageLiteral(resourceName: "placeholder-user")
+//            self.setupDefaultActionSheet()
+//        })
+//    }
     
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         
-        present(avatarImageActionSheet, animated: true)
+        present(imageActionSheet, animated: true)
     }
     
     func dismissKeyboard() {
@@ -147,7 +127,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = chosenImage
         dismiss(animated:true, completion: nil)
-        addDeleteActionToDefaultActionSheet()
+//        addDeleteActionToDefaultActionSheet()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -159,7 +139,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupDefaultActionSheet()
+        initDefaultActionSheet()
 //        printConrollsDescription()
     }
     
@@ -189,13 +169,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func printConrollsDescription() {
-        print(BlackButton.description)
-        print(RedButton.description)
-        print(BlueButton.description)
-        print(GreenButton.description)
-        print(PinkButton.description)
         print(LoginTextField.description)
         print(aboutTextView.description)
+        print(ColoredLabel.description)
+        print(imageView.description)
+        print(navigationBar.description)
     }
 
 }
