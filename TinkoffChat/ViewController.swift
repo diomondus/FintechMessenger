@@ -106,7 +106,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             self.photoPicker.sourceType = UIImagePickerControllerSourceType.camera
             self.photoPicker.cameraCaptureMode = .photo
             self.photoPicker.modalPresentationStyle = .fullScreen
-            self.present(self.photoPicker, animated: true, completion: nil)
+            self.present(self.photoPicker, animated: true)
         })
         
         avatarImageActionSheet.addAction(UIAlertAction(title: "Выбрать фото", style: .default) {
