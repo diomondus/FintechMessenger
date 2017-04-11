@@ -10,7 +10,13 @@
 		5E4866F71E93CB9D0089C98B /* FileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866F61E93CB9D0089C98B /* FileDataManager.swift */; };
 		5E4866FB1E93CBEE0089C98B /* GCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */; };
 		5E4866FD1E93CC150089C98B /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866FC1E93CC150089C98B /* OperationDataManager.swift */; };
+		5E543F401E9D5BFC0030270F /* PersonalChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */; };
 		5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6278D51E8F7A1100C22646 /* ChatCell.swift */; };
+		5E79C77C1E9C0F4600C42EB4 /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */; };
+		5E79C77E1E9C0F9000C42EB4 /* PeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */; };
+		5E79C7801E9C0FC700C42EB4 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */; };
+		5E79C7821E9C101B00C42EB4 /* PeerMessageSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */; };
+		5E79C7861E9C11C800C42EB4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C7851E9C11C800C42EB4 /* Message.swift */; };
 		5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */; };
 		5EB5FC5C1E6AEA82000562C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */; };
 		5EB5FC5F1E6AEA82000562C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */; };
@@ -24,7 +30,13 @@
 		5E4866F61E93CB9D0089C98B /* FileDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataManager.swift; sourceTree = "<group>"; };
 		5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDDataManager.swift; sourceTree = "<group>"; };
 		5E4866FC1E93CC150089C98B /* OperationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
+		5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalChatViewController.swift; sourceTree = "<group>"; };
 		5E6278D51E8F7A1100C22646 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorManager.swift; sourceTree = "<group>"; };
+		5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerManager.swift; sourceTree = "<group>"; };
+		5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
+		5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerMessageSerializer.swift; sourceTree = "<group>"; };
+		5E79C7851E9C11C800C42EB4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../Message.swift; sourceTree = "<group>"; };
 		5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +87,16 @@
 				5EB5FC681E6AEA82000562C6 /* Info.plist */,
 				5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */,
 				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
-				5EB5FC571E6AEA82000562C6 /* Products */,
 				5E4866F61E93CB9D0089C98B /* FileDataManager.swift */,
 				5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */,
 				5E4866FC1E93CC150089C98B /* OperationDataManager.swift */,
+				5EB5FC571E6AEA82000562C6 /* Products */,
+				5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */,
+				5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */,
+				5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */,
+				5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */,
+				5E79C7851E9C11C800C42EB4 /* Message.swift */,
+				5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
@@ -157,13 +175,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E4866F71E93CB9D0089C98B /* FileDataManager.swift in Sources */,
+				5E79C7801E9C0FC700C42EB4 /* MPCManager.swift in Sources */,
+				5E543F401E9D5BFC0030270F /* PersonalChatViewController.swift in Sources */,
 				5EB5FC5C1E6AEA82000562C6 /* ProfileViewController.swift in Sources */,
 				5E4866FB1E93CBEE0089C98B /* GCDDataManager.swift in Sources */,
 				5E4866FD1E93CC150089C98B /* OperationDataManager.swift in Sources */,
+				5E79C77C1E9C0F4600C42EB4 /* CommunicatorManager.swift in Sources */,
 				5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */,
 				5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */,
 				5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */,
+				5E79C7821E9C101B00C42EB4 /* PeerMessageSerializer.swift in Sources */,
 				5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */,
+				5E79C77E1E9C0F9000C42EB4 /* PeerManager.swift in Sources */,
+				5E79C7861E9C11C800C42EB4 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

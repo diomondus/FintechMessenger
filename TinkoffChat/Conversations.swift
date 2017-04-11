@@ -8,68 +8,80 @@
 
 import UIKit
 
-class ConversationsViewController: UITableViewController
+class ConversationsViewController: UITableViewController, CommunicatorManagerDelegate
 {
-    let onlineConversations = ["Марина","Сережа","Юрец","Маша","Катя"]
-    let historyConversations = ["Саня","Коля","Настя","Стас","Андрей","Никита","Саня","Коля","Света","Полина"]
+    let conversationCellId = "ChatCell"
+    let headersTitles = ["online", "history"]
     
-    let specialColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 0.1)
-    let lightYellow = UIColor(colorLiteralRed: 255, green: 255, blue: 0, alpha: 0.18)
+    let communicatorManager = CommunicatorManager()
+    
+    @IBAction func unwindToConversationList(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = specialColor
-        tableView.backgroundColor = specialColor
-        tableView.dataSource = self
-        tableView.delegate = self
+        communicatorManager.delegate = self
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2;
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        if (section == 0) {
-            return onlineConversations.count
-        } else if (section == 1) {
-            return historyConversations.count
-        } else {
-            return 0;
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (section == 0) {
-            return "Online"
-        } else if (section == 1) {
-            return "History"
-        } else {
-            return "";
-        }
-    }
-  
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func updateConversationList() {
+        tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell") as! ChatCell
-        if (indexPath.section == 0) {
-            cell.nameLabel.text = onlineConversations[indexPath.row]
-            cell.messageLabel.text = "Message"
-            cell.timeLabel.text = "23:59"
-            cell.backgroundColor = lightYellow
-        } else {
-            cell.nameLabel.text = historyConversations[indexPath.row]
-            cell.messageLabel.text = "Message"
-            cell.timeLabel.text = "23:30"
-            cell.backgroundColor = specialColor
+        return headersTitles[section]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "Conversation") {
+            let vc = segue.destination as! ConversationViewController
+            if let sender = sender as? ConversationCell {
+                vc.peerManager = sender.peerManager
+            }
         }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return headersTitles.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let offlinePeerManagersCount = communicatorManager.getOfflinePeerManagers().count
+        let onlinePeerManagersCount = communicatorManager.getOnlinePeerManagers().count
+        let peerManagersCountCalculatedByStatus = [onlinePeerManagersCount, offlinePeerManagersCount]
+        
+        return peerManagersCountCalculatedByStatus[section]
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let peerManagersSeparatedByStatus = [communicatorManager.getOnlinePeerManagers(), communicatorManager.getOfflinePeerManagers()]
+        let cell = tableView.dequeueReusableCell(withIdentifier:conversationCellId, for:indexPath) as! ConversationCell
+        let neededPeerManagers = peerManagersSeparatedByStatus[indexPath.section]
+        let filteredPeerManagers = neededPeerManagers.sorted(by: {
+            if ($0.chat.date != nil) && ($1.chat.date != nil) {
+                return $0.chat.date! > $1.chat.date!
+            }
+            else if ($0.chat.date == nil) && ($1.chat.date != nil) {
+                return true
+            }
+            else if ($0.chat.date != nil) && ($1.chat.date == nil) {
+                return false
+            }
+            else {
+                return $0.chat.name! > $1.chat.name!
+            }})
+        let peerManager = filteredPeerManagers[indexPath.row]
+        cell.updateCellForPeerManager(peerManager)
+        
         return cell
     }
+
 }
