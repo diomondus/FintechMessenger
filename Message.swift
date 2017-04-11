@@ -7,26 +7,6 @@
 //
 
 import UIKit
-
-class Message: NSObject {
-    
-    private(set) var text: String?
-    private(set) var date: Date?
-    private(set) var isOutcoming: Bool = false
-    private(set) var isUnread: Bool = true
-    
-    init(with text: String, date: Date, isOutcoming: Bool) {
-        self.text = text
-        self.date = date
-        self.isOutcoming = isOutcoming
-        super.init()
-    }
-    
-    func markAsRead() {
-        isUnread = false
-    }
-}
-
 import QuartzCore
 
 class MessageCell: UITableViewCell {
@@ -45,3 +25,23 @@ class MessageCell: UITableViewCell {
     }
     
 }
+
+class Message: NSObject {
+    
+    private(set) var text: String?
+    private(set) var date: Date?
+    private(set) var isOutcoming: Bool = false
+    private(set) var isUnread: Bool = true
+    
+    init(with text: String, date: Date, isOutcoming: Bool) {
+        self.isOutcoming = isOutcoming
+        self.text = text
+        self.date = date
+        super.init()
+    }
+    
+    func markAsRead() {
+        isUnread = false
+    }
+}
+

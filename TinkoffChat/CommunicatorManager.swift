@@ -23,7 +23,7 @@ class CommunicatorManager: NSObject, CommunicatorDelegate {
         setup()
     }
     
-    fileprivate func setup() {
+    func setup() {
         multipeerCommunicator.delegate = self
     }
 

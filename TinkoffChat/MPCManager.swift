@@ -36,8 +36,6 @@ class MultipeerCommunicator:NSObject, MCSessionDelegate, MCNearbyServiceBrowserD
     weak var delegate : CommunicatorDelegate?
     var online: Bool = false
     
-    // MARK: -
-    
     override init() {
         let myDiscoveryInfo = [discoveryInfoUserNameKey : UIDevice.current.name]
         serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType:serviceType)

@@ -10,9 +10,10 @@ import UIKit
 
 class PeerMessageSerializer: NSObject {
     
-    static let messageEventTypeKey = "eventType"
     static let messageEventTypeDescription = "TextMessage"
     static let messageIdKey = "messageId"
+    
+    static let messageEventTypeKey = "eventType"
     static let messageTextKey = "text"
     
     func generateMessageId() -> String {
