@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4144" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell" rowHeight="61" id="Jwh-tq-Xt9" customClass="ChatCell" customModule="TinkoffChat" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatCell" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatCell" rowHeight="61" id="Jwh-tq-Xt9" customClass="ConversationCell" customModule="TinkoffChat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jwh-tq-Xt9" id="dY6-53-EGI">
@@ -64,9 +64,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="messageLabel" destination="9iD-aW-Rpb" id="pzE-V6-1ix"/>
-                                    <outlet property="nameLabel" destination="Cth-W6-Zsg" id="mFz-lO-bOi"/>
-                                    <outlet property="timeLabel" destination="Xeh-Oe-6OB" id="Pvr-s2-mho"/>
+                                    <outlet property="messageLabel" destination="9iD-aW-Rpb" id="rbj-iZ-mPH"/>
+                                    <outlet property="nameLabel" destination="Cth-W6-Zsg" id="kSp-hD-u8v"/>
+                                    <outlet property="timeLabel" destination="Xeh-Oe-6OB" id="Jdq-Vg-1B9"/>
                                     <segue destination="mIH-Ch-M8K" kind="show" identifier="Conversation" id="lRr-ck-TAL"/>
                                 </connections>
                             </tableViewCell>
@@ -327,7 +327,6 @@
         <!--Personal Chat View Controller-->
         <scene sceneID="Tht-OD-yAp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvh-yl-DS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="mIH-Ch-M8K" userLabel="Personal Chat View Controller" customClass="ConversationViewController" customModule="TinkoffChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eHy-6B-d1M"/>
@@ -547,6 +546,7 @@
                         <outlet property="sendButton" destination="fDj-i8-Bcq" id="P7t-8U-TxE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvh-yl-DS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="-476"/>
         </scene>

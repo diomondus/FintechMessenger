@@ -10,7 +10,7 @@ import UIKit
 
 class ConversationsViewController: UITableViewController, CommunicatorManagerDelegate
 {
-    let conversationCellId = "ChatCell"
+    let chatCellId = "chatCell"
     let headersTitles = ["online", "history"]
     
     let communicatorManager = CommunicatorManager()
@@ -63,7 +63,7 @@ class ConversationsViewController: UITableViewController, CommunicatorManagerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let peerManagersSeparatedByStatus = [communicatorManager.getOnlinePeerManagers(), communicatorManager.getOfflinePeerManagers()]
-        let cell = tableView.dequeueReusableCell(withIdentifier:conversationCellId, for:indexPath) as! ConversationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:chatCellId, for:indexPath) as! ConversationCell
         let neededPeerManagers = peerManagersSeparatedByStatus[indexPath.section]
         let filteredPeerManagers = neededPeerManagers.sorted(by: {
             if ($0.chat.date != nil) && ($1.chat.date != nil) {
