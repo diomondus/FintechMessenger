@@ -62,6 +62,7 @@
 		5EB5FC4D1E6AEA82000562C6 = {
 			isa = PBXGroup;
 			children = (
+				5EB5FC571E6AEA82000562C6 /* Products */,
 				5EB5FC581E6AEA82000562C6 /* TinkoffChat */,
 			);
 			sourceTree = "<group>";
@@ -72,33 +73,103 @@
 				5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */,
 			);
 			name = Products;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		5EB5FC581E6AEA82000562C6 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
-				5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */,
-				5EF056921E8A4ED700E104B1 /* Conversations.swift */,
-				5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */,
-				5E6278D51E8F7A1100C22646 /* ChatCell.swift */,
+				5EE3E6A81EB919000064B1B8 /* CoreLayer */,
+				5EE3E6A71EB918F50064B1B8 /* PresentationLayer */,
+				5EE3E6A61EB918E30064B1B8 /* ServiceLayer */,
 				5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */,
-				5E4866F61E93CB9D0089C98B /* FileDataManager.swift */,
-				5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */,
-				5E4866FC1E93CC150089C98B /* OperationDataManager.swift */,
 				5EB5FC631E6AEA82000562C6 /* Assets.xcassets */,
 				5EB5FC681E6AEA82000562C6 /* Info.plist */,
 				5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */,
-				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
-				5EB5FC571E6AEA82000562C6 /* Products */,
-				5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */,
-				5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */,
-				5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */,
-				5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */,
-				5E79C7851E9C11C800C42EB4 /* Message.swift */,
-				5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */,
 			);
 			path = TinkoffChat;
+			sourceTree = "<group>";
+		};
+		5EE3E6A61EB918E30064B1B8 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5EE3E6AB1EB91A190064B1B8 /* PeerManager */,
+				5EE3E6AA1EB919FE0064B1B8 /* DataManager */,
+				5EE3E6A91EB9199E0064B1B8 /* Storyboards */,
+			);
+			name = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		5EE3E6A71EB918F50064B1B8 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5EE3E6AE1EB91B4F0064B1B8 /* PersonalChat */,
+				5EE3E6AD1EB91B370064B1B8 /* Conversations */,
+				5EE3E6AC1EB91B2C0064B1B8 /* Profile */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		5EE3E6A81EB919000064B1B8 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreLayer;
+			sourceTree = "<group>";
+		};
+		5EE3E6A91EB9199E0064B1B8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */,
+				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		5EE3E6AA1EB919FE0064B1B8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E4866F61E93CB9D0089C98B /* FileDataManager.swift */,
+				5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */,
+				5E4866FC1E93CC150089C98B /* OperationDataManager.swift */,
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		5EE3E6AB1EB91A190064B1B8 /* PeerManager */ = {
+			isa = PBXGroup;
+			children = (
+				5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */,
+				5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */,
+				5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */,
+				5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */,
+			);
+			name = PeerManager;
+			sourceTree = "<group>";
+		};
+		5EE3E6AC1EB91B2C0064B1B8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		5EE3E6AD1EB91B370064B1B8 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				5E6278D51E8F7A1100C22646 /* ChatCell.swift */,
+				5EF056921E8A4ED700E104B1 /* Conversations.swift */,
+			);
+			name = Conversations;
+			sourceTree = "<group>";
+		};
+		5EE3E6AE1EB91B4F0064B1B8 /* PersonalChat */ = {
+			isa = PBXGroup;
+			children = (
+				5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */,
+				5E79C7851E9C11C800C42EB4 /* Message.swift */,
+			);
+			name = PersonalChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -47,11 +47,10 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    @IBAction fileprivate func sendMessage(_ sender: UIButton) {
+    @IBAction func sendMessage(_ sender: UIButton) {
         if let peerManager = peerManager {
             peerManager.sendMessage(text: messageTexView.text)
             messageTexView.text = ""
-            sendButton.isEnabled = false
             updateTextViewHeight(for: messageTexView.attributedText)
         }
     }
@@ -66,9 +65,6 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         messagesListTableView.tableFooterView = UIView()
         subscribeForKeyboardNotification()
         setupGestureRecognizer()
-        
-        sendButton.isEnabled = false
-        
         if let peerManager = peerManager {
             navigationItem.title = peerManager.chat.name
         }
@@ -81,10 +77,6 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     deinit {
         unsubscribeFromKeyboardNotification()
         peerManager?.removeDelegate(self)
-    }
-    
-    fileprivate func setup() {
-
     }
     
     
@@ -128,12 +120,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     static let maxBottomPartHeight: CGFloat = 120
     static let minBottomPartHeight: CGFloat = 42
     static let lineHeightDeviation: CGFloat = 2
-    
-    func textViewDidChange(_ textView: UITextView) {
-        if let text = textView.text {
-            sendButton.isEnabled = text != ""
-        }
-    }
+
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if let futureText = textView.attributedText.mutableCopy() as? NSMutableAttributedString {
@@ -150,12 +137,6 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     func updateMessageList() {
         self.messagesListTableView.reloadData()
-    }
-    
-    func handleUserStatusChange() {
-        if let state = peerManager?.chat.online {
-            sendButton.isEnabled = state
-        }
     }
     
     
