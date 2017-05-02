@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EB5FC551E6AEA82000562C6"
+               BlueprintIdentifier = "1101CDB31E68CF5B003B7CA1"
                BuildableName = "TinkoffChat.app"
                BlueprintName = "TinkoffChat"
                ReferencedContainer = "container:TinkoffChat.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EB5FC551E6AEA82000562C6"
+            BlueprintIdentifier = "1101CDB31E68CF5B003B7CA1"
             BuildableName = "TinkoffChat.app"
             BlueprintName = "TinkoffChat"
             ReferencedContainer = "container:TinkoffChat.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EB5FC551E6AEA82000562C6"
+            BlueprintIdentifier = "1101CDB31E68CF5B003B7CA1"
             BuildableName = "TinkoffChat.app"
             BlueprintName = "TinkoffChat"
             ReferencedContainer = "container:TinkoffChat.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EB5FC551E6AEA82000562C6"
+            BlueprintIdentifier = "1101CDB31E68CF5B003B7CA1"
             BuildableName = "TinkoffChat.app"
             BlueprintName = "TinkoffChat"
             ReferencedContainer = "container:TinkoffChat.xcodeproj">

@@ -7,181 +7,268 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E4866F71E93CB9D0089C98B /* FileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866F61E93CB9D0089C98B /* FileDataManager.swift */; };
-		5E4866FB1E93CBEE0089C98B /* GCDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */; };
-		5E4866FD1E93CC150089C98B /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4866FC1E93CC150089C98B /* OperationDataManager.swift */; };
-		5E543F401E9D5BFC0030270F /* PersonalChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */; };
-		5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6278D51E8F7A1100C22646 /* ChatCell.swift */; };
-		5E79C77C1E9C0F4600C42EB4 /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */; };
-		5E79C77E1E9C0F9000C42EB4 /* PeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */; };
-		5E79C7801E9C0FC700C42EB4 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */; };
-		5E79C7821E9C101B00C42EB4 /* PeerMessageSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */; };
-		5E79C7861E9C11C800C42EB4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79C7851E9C11C800C42EB4 /* Message.swift */; };
-		5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */; };
-		5EB5FC5C1E6AEA82000562C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */; };
-		5EB5FC5F1E6AEA82000562C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */; };
-		5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */; };
-		5EB5FC641E6AEA82000562C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC631E6AEA82000562C6 /* Assets.xcassets */; };
-		5EB5FC671E6AEA82000562C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */; };
-		5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF056921E8A4ED700E104B1 /* Conversations.swift */; };
+		1101CDB81E68CF5B003B7CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101CDB71E68CF5B003B7CA1 /* AppDelegate.swift */; };
+		1101CDBD1E68CF5B003B7CA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1101CDBB1E68CF5B003B7CA1 /* Main.storyboard */; };
+		1101CDC21E68CF5B003B7CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1101CDC01E68CF5B003B7CA1 /* LaunchScreen.storyboard */; };
+		111B5C811E8901670043FD47 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B5C801E8901670043FD47 /* Message.swift */; };
+		1133D4201E69B564006A69F3 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D41F1E69B564006A69F3 /* ConversationsListViewController.swift */; };
+		1133D4221E69B6AE006A69F3 /* MultipeerCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D4211E69B6AE006A69F3 /* MultipeerCommunicator.swift */; };
+		11370A801E855982006C487B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11370A7F1E855982006C487B /* ConversationViewController.swift */; };
+		11370A831E855A14006C487B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11370A821E855A14006C487B /* MessageCell.swift */; };
+		114C9D3E1E88F59300DB0A0B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C9D3D1E88F59300DB0A0B /* Chat.swift */; };
+		11668D7D1EAB4701009AF385 /* IdentifierGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11668D7C1EAB4701009AF385 /* IdentifierGenerator.swift */; };
+		116F873C1E97854B00C18C49 /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F873B1E97854B00C18C49 /* CommunicatorManager.swift */; };
+		117B966A1EA510730052BF52 /* ProfileDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B96691EA510730052BF52 /* ProfileDataService.swift */; };
+		118102BB1E8683A600E4FA53 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118102BA1E8683A600E4FA53 /* CoreData.framework */; };
+		11923DD41EA7739800DC96C3 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11923DD31EA7739800DC96C3 /* ServiceAssembly.swift */; };
+		119A0BB51EB0CA88002BA523 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A0BB41EB0CA88002BA523 /* Profile.swift */; };
+		119A0BB71EB0CAA8002BA523 /* ProfileEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A0BB61EB0CAA8002BA523 /* ProfileEditorViewController.swift */; };
+		119BFF4B1E98C0370071E02C /* PeerMessageSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119BFF4A1E98C0370071E02C /* PeerMessageSerializer.swift */; };
+		119C36C91E853EA6006B234F /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C36C81E853EA6006B234F /* ConversationCell.swift */; };
+		11B76B5C1EB480E50061478E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11B76B5A1EB480E50061478E /* Model.xcdatamodeld */; };
+		11B76B5F1EB4810B0061478E /* CDClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76B5D1EB4810B0061478E /* CDClass.swift */; };
+		11B76B601EB4810B0061478E /* CDProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76B5E1EB4810B0061478E /* CDProperties.swift */; };
+		11B76B621EB487730061478E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B76B611EB487730061478E /* Stack.swift */; };
+		11FA245E1E910BE0002166D6 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA245D1E910BE0002166D6 /* UIButton+BackgroundColor.swift */; };
+		11FA24601E910C6E002166D6 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FA245F1E910C6E002166D6 /* ColoredButton.swift */; };
+		5E14884D1EB929480056AB92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E14884C1EB929480056AB92 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E4866F61E93CB9D0089C98B /* FileDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataManager.swift; sourceTree = "<group>"; };
-		5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDDataManager.swift; sourceTree = "<group>"; };
-		5E4866FC1E93CC150089C98B /* OperationDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
-		5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalChatViewController.swift; sourceTree = "<group>"; };
-		5E6278D51E8F7A1100C22646 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorManager.swift; sourceTree = "<group>"; };
-		5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerManager.swift; sourceTree = "<group>"; };
-		5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
-		5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerMessageSerializer.swift; sourceTree = "<group>"; };
-		5E79C7851E9C11C800C42EB4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../Message.swift; sourceTree = "<group>"; };
-		5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		5EB5FC5E1E6AEA82000562C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5EB5FC611E6AEA82000562C6 /* TinkoffChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TinkoffChat.xcdatamodel; sourceTree = "<group>"; };
-		5EB5FC631E6AEA82000562C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5EB5FC661E6AEA82000562C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5EB5FC681E6AEA82000562C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EF056921E8A4ED700E104B1 /* Conversations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
+		1101CDB41E68CF5B003B7CA1 /* TinkoffChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1101CDB71E68CF5B003B7CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1101CDBC1E68CF5B003B7CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1101CDC11E68CF5B003B7CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1101CDC31E68CF5B003B7CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		111B5C801E8901670043FD47 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1133D41F1E69B564006A69F3 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		1133D4211E69B6AE006A69F3 /* MultipeerCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerCommunicator.swift; sourceTree = "<group>"; };
+		11370A7F1E855982006C487B /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		11370A821E855A14006C487B /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		114C9D3D1E88F59300DB0A0B /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		11668D7C1EAB4701009AF385 /* IdentifierGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifierGenerator.swift; sourceTree = "<group>"; };
+		116F873B1E97854B00C18C49 /* CommunicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorManager.swift; sourceTree = "<group>"; };
+		117B96691EA510730052BF52 /* ProfileDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDataService.swift; sourceTree = "<group>"; };
+		118102BA1E8683A600E4FA53 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		119142511E68D7C200FF9A1B /* TinkoffChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinkoffChat.entitlements; sourceTree = "<group>"; };
+		11923DD31EA7739800DC96C3 /* ServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		119A0BB41EB0CA88002BA523 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		119A0BB61EB0CAA8002BA523 /* ProfileEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditorViewController.swift; sourceTree = "<group>"; };
+		119BFF4A1E98C0370071E02C /* PeerMessageSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerMessageSerializer.swift; sourceTree = "<group>"; };
+		119C36C81E853EA6006B234F /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		11B76B5B1EB480E50061478E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		11B76B5D1EB4810B0061478E /* CDClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDClass.swift; path = ../../CDClass.swift; sourceTree = "<group>"; };
+		11B76B5E1EB4810B0061478E /* CDProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDProperties.swift; path = ../../CDProperties.swift; sourceTree = "<group>"; };
+		11B76B611EB487730061478E /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = ../Storyboards/Stack.swift; sourceTree = "<group>"; };
+		11FA245D1E910BE0002166D6 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
+		11FA245F1E910C6E002166D6 /* ColoredButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
+		5E14884C1EB929480056AB92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EB5FC531E6AEA82000562C6 /* Frameworks */ = {
+		1101CDB11E68CF5B003B7CA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118102BB1E8683A600E4FA53 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EB5FC4D1E6AEA82000562C6 = {
+		1101CDAB1E68CF5B003B7CA1 = {
 			isa = PBXGroup;
 			children = (
-				5EB5FC571E6AEA82000562C6 /* Products */,
-				5EB5FC581E6AEA82000562C6 /* TinkoffChat */,
+				118102B91E8683A600E4FA53 /* Frameworks */,
+				1101CDB51E68CF5B003B7CA1 /* Products */,
+				1101CDB61E68CF5B003B7CA1 /* TinkoffChat */,
 			);
 			sourceTree = "<group>";
 		};
-		5EB5FC571E6AEA82000562C6 /* Products */ = {
+		1101CDB51E68CF5B003B7CA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */,
+				1101CDB41E68CF5B003B7CA1 /* TinkoffChat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5EB5FC581E6AEA82000562C6 /* TinkoffChat */ = {
+		1101CDB61E68CF5B003B7CA1 /* TinkoffChat */ = {
 			isa = PBXGroup;
 			children = (
-				5EE3E6A81EB919000064B1B8 /* CoreLayer */,
-				5EE3E6A71EB918F50064B1B8 /* PresentationLayer */,
-				5EE3E6A61EB918E30064B1B8 /* ServiceLayer */,
-				5EB5FC591E6AEA82000562C6 /* AppDelegate.swift */,
-				5EB5FC631E6AEA82000562C6 /* Assets.xcassets */,
-				5EB5FC681E6AEA82000562C6 /* Info.plist */,
-				5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */,
+				5E14884E1EB932900056AB92 /* Utils */,
+				117B96641EA505150052BF52 /* PresentationLayer */,
+				117B96661EA5052F0052BF52 /* ServiceLayer */,
+				117B96651EA505270052BF52 /* CoreLayer */,
+				5E14884C1EB929480056AB92 /* Assets.xcassets */,
+				1101CDC31E68CF5B003B7CA1 /* Info.plist */,
+				119142511E68D7C200FF9A1B /* TinkoffChat.entitlements */,
 			);
 			path = TinkoffChat;
 			sourceTree = "<group>";
 		};
-		5EE3E6A61EB918E30064B1B8 /* ServiceLayer */ = {
+		11370A7E1E855935006C487B /* ConversationList */ = {
 			isa = PBXGroup;
 			children = (
-				5EE3E6AB1EB91A190064B1B8 /* PeerManager */,
-				5EE3E6AA1EB919FE0064B1B8 /* DataManager */,
-				5EE3E6A91EB9199E0064B1B8 /* Storyboards */,
+				114C9D3D1E88F59300DB0A0B /* Chat.swift */,
+				119C36C81E853EA6006B234F /* ConversationCell.swift */,
+				1133D41F1E69B564006A69F3 /* ConversationsListViewController.swift */,
 			);
-			name = ServiceLayer;
+			path = ConversationList;
 			sourceTree = "<group>";
 		};
-		5EE3E6A71EB918F50064B1B8 /* PresentationLayer */ = {
+		11370A811E855989006C487B /* Conversation */ = {
 			isa = PBXGroup;
 			children = (
-				5EE3E6AE1EB91B4F0064B1B8 /* PersonalChat */,
-				5EE3E6AD1EB91B370064B1B8 /* Conversations */,
-				5EE3E6AC1EB91B2C0064B1B8 /* Profile */,
+				11370A7F1E855982006C487B /* ConversationViewController.swift */,
+				111B5C801E8901670043FD47 /* Message.swift */,
+				11370A821E855A14006C487B /* MessageCell.swift */,
 			);
-			name = PresentationLayer;
+			path = Conversation;
 			sourceTree = "<group>";
 		};
-		5EE3E6A81EB919000064B1B8 /* CoreLayer */ = {
+		117B96641EA505150052BF52 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				117B96671EA506CE0052BF52 /* Modules */,
+				119C36C61E853CA0006B234F /* Storyboards */,
 			);
-			name = CoreLayer;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		5EE3E6A91EB9199E0064B1B8 /* Storyboards */ = {
+		117B96651EA505270052BF52 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */,
-				5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */,
+				119C99AC1EB5D8C900B8FE56 /* CoreData */,
+				117B96681EA507A20052BF52 /* MultipeerCommunicator */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		117B96661EA5052F0052BF52 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				11CD76D41EA8ED8500E0060E /* CommunicatorService */,
+				11CD76D51EA8ED9900E0060E /* ProfileDataStorageService */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		117B96671EA506CE0052BF52 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				11370A811E855989006C487B /* Conversation */,
+				11370A7E1E855935006C487B /* ConversationList */,
+				119A0BB31EB0CA77002BA523 /* UserProfile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		117B96681EA507A20052BF52 /* MultipeerCommunicator */ = {
+			isa = PBXGroup;
+			children = (
+				1133D4211E69B6AE006A69F3 /* MultipeerCommunicator.swift */,
+				119BFF4A1E98C0370071E02C /* PeerMessageSerializer.swift */,
+			);
+			path = MultipeerCommunicator;
+			sourceTree = "<group>";
+		};
+		118102B91E8683A600E4FA53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				118102BA1E8683A600E4FA53 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		119A0BB31EB0CA77002BA523 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				11FA24611E910CA3002166D6 /* Additions */,
+				11FA245C1E910B47002166D6 /* Extentions */,
+				119A0BB41EB0CA88002BA523 /* Profile.swift */,
+				119A0BB61EB0CAA8002BA523 /* ProfileEditorViewController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		119C36C61E853CA0006B234F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1101CDC01E68CF5B003B7CA1 /* LaunchScreen.storyboard */,
+				1101CDBB1E68CF5B003B7CA1 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			path = ../Storyboards;
 			sourceTree = "<group>";
 		};
-		5EE3E6AA1EB919FE0064B1B8 /* DataManager */ = {
+		119C99AC1EB5D8C900B8FE56 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				5E4866F61E93CB9D0089C98B /* FileDataManager.swift */,
-				5E4866FA1E93CBEE0089C98B /* GCDDataManager.swift */,
-				5E4866FC1E93CC150089C98B /* OperationDataManager.swift */,
+				11B76B611EB487730061478E /* Stack.swift */,
+				11B76B5E1EB4810B0061478E /* CDProperties.swift */,
+				11B76B5D1EB4810B0061478E /* CDClass.swift */,
+				11B76B5A1EB480E50061478E /* Model.xcdatamodeld */,
 			);
-			name = DataManager;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
-		5EE3E6AB1EB91A190064B1B8 /* PeerManager */ = {
+		11CD76D41EA8ED8500E0060E /* CommunicatorService */ = {
 			isa = PBXGroup;
 			children = (
-				5E79C77F1E9C0FC700C42EB4 /* MPCManager.swift */,
-				5E79C77D1E9C0F9000C42EB4 /* PeerManager.swift */,
-				5E79C7811E9C101B00C42EB4 /* PeerMessageSerializer.swift */,
-				5E79C77B1E9C0F4600C42EB4 /* CommunicatorManager.swift */,
+				116F873B1E97854B00C18C49 /* CommunicatorManager.swift */,
 			);
-			name = PeerManager;
+			path = CommunicatorService;
 			sourceTree = "<group>";
 		};
-		5EE3E6AC1EB91B2C0064B1B8 /* Profile */ = {
+		11CD76D51EA8ED9900E0060E /* ProfileDataStorageService */ = {
 			isa = PBXGroup;
 			children = (
-				5EB5FC5B1E6AEA82000562C6 /* ProfileViewController.swift */,
+				117B96691EA510730052BF52 /* ProfileDataService.swift */,
 			);
-			name = Profile;
+			name = ProfileDataStorageService;
+			path = DataStorageService;
 			sourceTree = "<group>";
 		};
-		5EE3E6AD1EB91B370064B1B8 /* Conversations */ = {
+		11FA245C1E910B47002166D6 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				5E6278D51E8F7A1100C22646 /* ChatCell.swift */,
-				5EF056921E8A4ED700E104B1 /* Conversations.swift */,
+				11FA245D1E910BE0002166D6 /* UIButton+BackgroundColor.swift */,
 			);
-			name = Conversations;
+			name = Extentions;
+			path = ../../../Extentions;
 			sourceTree = "<group>";
 		};
-		5EE3E6AE1EB91B4F0064B1B8 /* PersonalChat */ = {
+		11FA24611E910CA3002166D6 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				5E543F3F1E9D5BFC0030270F /* PersonalChatViewController.swift */,
-				5E79C7851E9C11C800C42EB4 /* Message.swift */,
+				11FA245F1E910C6E002166D6 /* ColoredButton.swift */,
 			);
-			name = PersonalChat;
+			name = Additions;
+			path = ../../../Additions;
+			sourceTree = "<group>";
+		};
+		5E14884E1EB932900056AB92 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1101CDB71E68CF5B003B7CA1 /* AppDelegate.swift */,
+				11668D7C1EAB4701009AF385 /* IdentifierGenerator.swift */,
+				11923DD31EA7739800DC96C3 /* ServiceAssembly.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5EB5FC551E6AEA82000562C6 /* TinkoffChat */ = {
+		1101CDB31E68CF5B003B7CA1 /* TinkoffChat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EB5FC6B1E6AEA82000562C6 /* Build configuration list for PBXNativeTarget "TinkoffChat" */;
+			buildConfigurationList = 1101CDC61E68CF5B003B7CA1 /* Build configuration list for PBXNativeTarget "TinkoffChat" */;
 			buildPhases = (
-				5EB5FC521E6AEA82000562C6 /* Sources */,
-				5EB5FC531E6AEA82000562C6 /* Frameworks */,
-				5EB5FC541E6AEA82000562C6 /* Resources */,
+				1101CDB01E68CF5B003B7CA1 /* Sources */,
+				1101CDB11E68CF5B003B7CA1 /* Frameworks */,
+				1101CDB21E68CF5B003B7CA1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -189,27 +276,32 @@
 			);
 			name = TinkoffChat;
 			productName = TinkoffChat;
-			productReference = 5EB5FC561E6AEA82000562C6 /* TinkoffChat.app */;
+			productReference = 1101CDB41E68CF5B003B7CA1 /* TinkoffChat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5EB5FC4E1E6AEA82000562C6 /* Project object */ = {
+		1101CDAC1E68CF5B003B7CA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Дмитрий Бутилов";
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Alexander Terekhov";
 				TargetAttributes = {
-					5EB5FC551E6AEA82000562C6 = {
-						CreatedOnToolsVersion = 8.2.1;
+					1101CDB31E68CF5B003B7CA1 = {
+						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 77ZXHT565T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 5EB5FC511E6AEA82000562C6 /* Build configuration list for PBXProject "TinkoffChat" */;
+			buildConfigurationList = 1101CDAF1E68CF5B003B7CA1 /* Build configuration list for PBXProject "TinkoffChat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,74 +309,83 @@
 				en,
 				Base,
 			);
-			mainGroup = 5EB5FC4D1E6AEA82000562C6;
-			productRefGroup = 5EB5FC571E6AEA82000562C6 /* Products */;
+			mainGroup = 1101CDAB1E68CF5B003B7CA1;
+			productRefGroup = 1101CDB51E68CF5B003B7CA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EB5FC551E6AEA82000562C6 /* TinkoffChat */,
+				1101CDB31E68CF5B003B7CA1 /* TinkoffChat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5EB5FC541E6AEA82000562C6 /* Resources */ = {
+		1101CDB21E68CF5B003B7CA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EB5FC671E6AEA82000562C6 /* LaunchScreen.storyboard in Resources */,
-				5EB5FC641E6AEA82000562C6 /* Assets.xcassets in Resources */,
-				5EB5FC5F1E6AEA82000562C6 /* Main.storyboard in Resources */,
+				1101CDC21E68CF5B003B7CA1 /* LaunchScreen.storyboard in Resources */,
+				5E14884D1EB929480056AB92 /* Assets.xcassets in Resources */,
+				1101CDBD1E68CF5B003B7CA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5EB5FC521E6AEA82000562C6 /* Sources */ = {
+		1101CDB01E68CF5B003B7CA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4866F71E93CB9D0089C98B /* FileDataManager.swift in Sources */,
-				5E79C7801E9C0FC700C42EB4 /* MPCManager.swift in Sources */,
-				5E543F401E9D5BFC0030270F /* PersonalChatViewController.swift in Sources */,
-				5EB5FC5C1E6AEA82000562C6 /* ProfileViewController.swift in Sources */,
-				5E4866FB1E93CBEE0089C98B /* GCDDataManager.swift in Sources */,
-				5E4866FD1E93CC150089C98B /* OperationDataManager.swift in Sources */,
-				5E79C77C1E9C0F4600C42EB4 /* CommunicatorManager.swift in Sources */,
-				5EB5FC5A1E6AEA82000562C6 /* AppDelegate.swift in Sources */,
-				5EB5FC621E6AEA82000562C6 /* TinkoffChat.xcdatamodeld in Sources */,
-				5E6278D61E8F7A1100C22646 /* ChatCell.swift in Sources */,
-				5E79C7821E9C101B00C42EB4 /* PeerMessageSerializer.swift in Sources */,
-				5EF056931E8A4ED700E104B1 /* Conversations.swift in Sources */,
-				5E79C77E1E9C0F9000C42EB4 /* PeerManager.swift in Sources */,
-				5E79C7861E9C11C800C42EB4 /* Message.swift in Sources */,
+				11370A801E855982006C487B /* ConversationViewController.swift in Sources */,
+				11B76B621EB487730061478E /* Stack.swift in Sources */,
+				11370A831E855A14006C487B /* MessageCell.swift in Sources */,
+				114C9D3E1E88F59300DB0A0B /* Chat.swift in Sources */,
+				117B966A1EA510730052BF52 /* ProfileDataService.swift in Sources */,
+				11668D7D1EAB4701009AF385 /* IdentifierGenerator.swift in Sources */,
+				1101CDB81E68CF5B003B7CA1 /* AppDelegate.swift in Sources */,
+				11B76B5C1EB480E50061478E /* Model.xcdatamodeld in Sources */,
+				119A0BB51EB0CA88002BA523 /* Profile.swift in Sources */,
+				11923DD41EA7739800DC96C3 /* ServiceAssembly.swift in Sources */,
+				11FA245E1E910BE0002166D6 /* UIButton+BackgroundColor.swift in Sources */,
+				119BFF4B1E98C0370071E02C /* PeerMessageSerializer.swift in Sources */,
+				119C36C91E853EA6006B234F /* ConversationCell.swift in Sources */,
+				119A0BB71EB0CAA8002BA523 /* ProfileEditorViewController.swift in Sources */,
+				1133D4221E69B6AE006A69F3 /* MultipeerCommunicator.swift in Sources */,
+				111B5C811E8901670043FD47 /* Message.swift in Sources */,
+				116F873C1E97854B00C18C49 /* CommunicatorManager.swift in Sources */,
+				11B76B601EB4810B0061478E /* CDProperties.swift in Sources */,
+				1133D4201E69B564006A69F3 /* ConversationsListViewController.swift in Sources */,
+				11FA24601E910C6E002166D6 /* ColoredButton.swift in Sources */,
+				11B76B5F1EB4810B0061478E /* CDClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5EB5FC5D1E6AEA82000562C6 /* Main.storyboard */ = {
+		1101CDBB1E68CF5B003B7CA1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5EB5FC5E1E6AEA82000562C6 /* Base */,
+				1101CDBC1E68CF5B003B7CA1 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
-		5EB5FC651E6AEA82000562C6 /* LaunchScreen.storyboard */ = {
+		1101CDC01E68CF5B003B7CA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5EB5FC661E6AEA82000562C6 /* Base */,
+				1101CDC11E68CF5B003B7CA1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5EB5FC691E6AEA82000562C6 /* Debug */ = {
+		1101CDC41E68CF5B003B7CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,7 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -324,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +434,7 @@
 			};
 			name = Debug;
 		};
-		5EB5FC6A1E6AEA82000562C6 /* Release */ = {
+		1101CDC51E68CF5B003B7CA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,7 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -367,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -375,34 +476,32 @@
 			};
 			name = Release;
 		};
-		5EB5FC6C1E6AEA82000562C6 /* Debug */ = {
+		1101CDC71E68CF5B003B7CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = TinkoffChat/TinkoffChat.entitlements;
 				DEVELOPMENT_TEAM = 77ZXHT565T;
 				INFOPLIST_FILE = TinkoffChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.butilov.TinkoffChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		5EB5FC6D1E6AEA82000562C6 /* Release */ = {
+		1101CDC81E68CF5B003B7CA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = TinkoffChat/TinkoffChat.entitlements;
 				DEVELOPMENT_TEAM = 77ZXHT565T;
 				INFOPLIST_FILE = TinkoffChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.butilov.TinkoffChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -410,20 +509,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EB5FC511E6AEA82000562C6 /* Build configuration list for PBXProject "TinkoffChat" */ = {
+		1101CDAF1E68CF5B003B7CA1 /* Build configuration list for PBXProject "TinkoffChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EB5FC691E6AEA82000562C6 /* Debug */,
-				5EB5FC6A1E6AEA82000562C6 /* Release */,
+				1101CDC41E68CF5B003B7CA1 /* Debug */,
+				1101CDC51E68CF5B003B7CA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EB5FC6B1E6AEA82000562C6 /* Build configuration list for PBXNativeTarget "TinkoffChat" */ = {
+		1101CDC61E68CF5B003B7CA1 /* Build configuration list for PBXNativeTarget "TinkoffChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EB5FC6C1E6AEA82000562C6 /* Debug */,
-				5EB5FC6D1E6AEA82000562C6 /* Release */,
+				1101CDC71E68CF5B003B7CA1 /* Debug */,
+				1101CDC81E68CF5B003B7CA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -431,17 +530,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5EB5FC601E6AEA82000562C6 /* TinkoffChat.xcdatamodeld */ = {
+		11B76B5A1EB480E50061478E /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5EB5FC611E6AEA82000562C6 /* TinkoffChat.xcdatamodel */,
+				11B76B5B1EB480E50061478E /* Model.xcdatamodel */,
 			);
-			currentVersion = 5EB5FC611E6AEA82000562C6 /* TinkoffChat.xcdatamodel */;
-			path = TinkoffChat.xcdatamodeld;
+			currentVersion = 11B76B5B1EB480E50061478E /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 5EB5FC4E1E6AEA82000562C6 /* Project object */;
+	rootObject = 1101CDAC1E68CF5B003B7CA1 /* Project object */;
 }
